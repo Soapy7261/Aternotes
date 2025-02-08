@@ -7,6 +7,7 @@
 
 body {
     min-height: 100vh;
+    background-color: var(--primary-color);
 }
 
 :root {
@@ -14,7 +15,7 @@ body {
     font-size: 16px;
     color: #333;
 
-    --primary-color: #fff;
+    --primary-color: #333;
     --accent-color: #1FD78D;
     --secondary-color: #000;
 }
