@@ -1,8 +1,5 @@
 <?php
-include 'src/Controllers/UrlController.php';
-include 'src/Controllers/ConfigController.php';
-
-//echo phpinfo()
+include 'bootstrap.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +13,7 @@ include 'src/Controllers/ConfigController.php';
 </head>
 <body>
     <nav class="navbar">
-        <a class="navbar__container" href="src/resources/views/public/home.php">
+        <a class="navbar__container" href="<?php echo urlHandler('src/resources/views/public/home.php') ;?>">
             <button class="navbar__button">
                 <span class="navbar_button--paddingEven">Log in</span>
             </button>
