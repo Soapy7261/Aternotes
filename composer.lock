@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "108be68e4e2b97fed51d36a10eed0849",
+    "content-hash": "fbe17e109d57c901e2a8584e886c9ed8",
     "packages": [
+        {
+            "name": "aternos/model",
+            "version": "v3.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aternosorg/php-model.git",
+                "reference": "b4fba6eddc1dca54c45047340ba3d5cd96780069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aternosorg/php-model/zipball/b4fba6eddc1dca54c45047340ba3d5cd96780069",
+                "reference": "b4fba6eddc1dca54c45047340ba3d5cd96780069",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "elasticsearch/elasticsearch": "^7.10",
+                "phpunit/phpunit": "^10.2"
+            },
+            "suggest": {
+                "elasticsearch/elasticsearch": "To use the Elasticsearch Search driver",
+                "ext-cassandra": "To use the Cassandra NoSQL driver",
+                "ext-mysqli": "To use the Mysqli Relational driver",
+                "ext-redis": "To use the Redis Cache driver"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aternos\\Model\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Neid",
+                    "email": "matthias@aternos.org"
+                }
+            ],
+            "description": "PHP library for simple and complex database models",
+            "keywords": [
+                "database",
+                "model"
+            ],
+            "support": {
+                "issues": "https://github.com/aternosorg/php-model/issues",
+                "source": "https://github.com/aternosorg/php-model"
+            },
+            "time": "2025-01-27T13:00:03+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.3",
@@ -470,10 +525,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
