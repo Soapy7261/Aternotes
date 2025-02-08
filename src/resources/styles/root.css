@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+body {
+    min-height: 100vh;
+}
+
+:root {
+    font-family: 'Ariel', sans-serif;
+    font-size: 16px;
+    color: #333;
+
+    --primary-color: #fff;
+    --accent-color: #1FD78D;
+    --secondary-color: #000;
+}
