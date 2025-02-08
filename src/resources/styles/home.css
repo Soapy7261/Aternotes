@@ -1,0 +1,91 @@
+.navbar {
+    position: absolute;
+    right:0;
+    padding: 1.5rem;
+}
+
+.navbar__button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-radius: 50px;
+    border: 2px solid var(--accent-color); /* Button outline */
+    background-color: transparent; /* Set initial background */
+    font-weight: bold;
+    color: var(--accent-color); /* Text color same as border */
+    position: relative;
+    padding-left: calc(2rem + 1rem); /* Adjust for circle */
+    transition: color 0.5s ease-out, background-color 0.5s ease-out; /* Only transition these properties */
+}
+
+.navbar__container {
+    text-decoration: none;
+}
+
+.navbar__button:hover {
+    background-color: var(--accent-color); /* Background on hover */
+    color: var(--primary-color); /* Text color on hover */
+}
+
+.navbar__button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: calc(2rem + 1rem); /* Match button height */
+    height: 100%;
+    background-color: var(--accent-color); /* Solid circle */
+    border-radius: 50%;
+}
+
+.navbar_button--paddingEven {
+    padding: 0rem 1.5rem;
+}
+
+.body__header {
+    display: flex;
+    color: var(--accent-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.body__header__image {
+    height: 10rem;
+}
+
+.body__header__cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap:1rem;
+}
+
+.body__header__card {
+    width: 20%;
+    max-width: 20%;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 25px;
+    box-shadow: 5px 5px 0 #2B87D3;
+}
+
+.body__header__card>h3 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .body__header__image { height: 4rem; padding: 1px }
+    .body__header__cards { flex-direction: column; align-items: center; width: unset }
+    .body__header__card { width: unset; max-width: 80% }
+    .body__header { margin: 0 auto; text-align: center; min-height: unset; }
+    .navbar {
+        position: unset;
+        text-align: center;
+        display: flex;
+        justify-content: right;
+    }
+
+}
