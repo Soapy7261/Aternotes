@@ -35,4 +35,12 @@ function userHandler(string $username, string $password)
     }
 
     $HashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    if (password_verify($password, $firstUser->password)) {
+        $_SESSION['user'] = $firstUser->id;
+        echo json_encode(['success' => 'User logged in', 'status' => 200]);
+    } else {
+        echo json_encode(['error' => 'Password incorrect', 'status' => 401]);
+        http_response_code(401);
+    }
 }
