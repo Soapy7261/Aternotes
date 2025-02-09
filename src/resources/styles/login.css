@@ -1,0 +1,81 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__container {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    max-width: 50%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login__header {
+    text-align: center;
+}
+
+.login__image {
+    height: 5rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+.login__input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid black;
+    height: 2rem;
+}
+
+.login__input::placeholder {
+    color: black;
+    font-weight: bold;
+    opacity: 0.5;
+    font-size: 1.5rem;
+}
+
+.login__input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.login__input__container {
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s ease;
+}
+
+.login__input__container:focus-within .login__label {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.login__button {
+    padding: .5rem;
+    border:2px solid var(--accent-color);
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 1.5rem;
+}
+
+.login__button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
