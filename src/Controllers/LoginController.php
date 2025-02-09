@@ -1,5 +1,7 @@
 <?php
 
+include __DIR__ . '/../../bootstrap.php';
+
 use App\Models\User;
 
 if (isset($_POST['function'])) {
@@ -22,16 +24,14 @@ if (isset($_POST['function'])) {
 
 function userHandler(string $username, string $password)
 {
-    echo 'hi';
 
     $user = User::select(['username' => $username]);
 
-    echo 'hi?';
+    $firstUser = $user[0] ?? null;
 
-    if (!$user) {
-        echo json_encode(['error' => 'User not found', 'status' => 404]);
+    if (!$firstUser) {
         http_response_code(404);
-        return;
+        echo json_encode(['error' => 'User not found', 'status' => 404]);
     }
 
     $HashedPassword = password_hash($password, PASSWORD_DEFAULT);
