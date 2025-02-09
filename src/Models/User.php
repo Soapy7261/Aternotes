@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class User extends \Aternos\Model\GenericModel
 {
     // use model registry (default: true)
