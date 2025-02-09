@@ -1,33 +1,41 @@
+:root {
+    --primary-color: #f8f9fa;
+    --secondary-color: #2d3436;
+    --accent-color: #1FD78D;
+    --accent-color-darker: #1aa572;
+    --text-color: #2d3436;
+    --navbar-bg: rgba(248, 249, 250, 0.95);
+    --hero-bg-1: #f8f9fa;
+    --hero-bg-2: #e1f7ed;
+    --card-bg: #ffffff;
+    --card-central-bg: #f1fcfa;
+    --theme-toggle-bg: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode {
+    --primary-color: #0a0a0a;
+    --secondary-color: #f8f9fa;
+    --text-color: #f8f9fa;
+    --navbar-bg: rgba(10, 10, 10, 0.95);
+    --hero-bg-1: #121212;
+    --hero-bg-2: #0d1f18;
+    --card-bg: #1a1a1a;
+    --card-central-bg: #1a2a24;
+    --theme-toggle-bg: rgba(26, 26, 26, 0.9);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: transparent;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease;
 }
 
 body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
     min-height: 100vh;
     background-color: var(--primary-color);
     color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-body.dark-mode {
-    --primary-color: #121212;
-    --secondary-color: #fff;
-    --accent-color: #1FD78D;
-    --accent-color-darker: #14a067;
-    --text-color: #f0f0f0;
-}
-
-
-:root {
-    font-size: 16px;
-    --primary-color: #f0f0f0;
-    --secondary-color: #333;
-    --accent-color: #1FD78D;
-    --accent-color-darker: #2B87D3;
-    --text-color: #333;
+    scroll-behavior: smooth;
 }
