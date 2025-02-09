@@ -7,27 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/root.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <script src="/node_modules/axios/dist/axios.js"></script>
 </head>
-
-<?php
-require_once __DIR__ . '/../../Controllers/LoginController.php';
-include __DIR__ . '/../../../bootstrap.php';
-
-if ($_POST['username'] && $_POST['password']) {
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    userHandler($username, $password);
-}
-?>
 
 <body>
     <div class="container">
         <div class="login__container">
             <h1 class="login__header">Log in</h1>
             <img class="login__image" src="../images/logo_green.png" alt="logo" style="height: 5rem">
-            <form class="login__form" action="" method="post">
+            <form id="loginForm" class="login__form" action="" method="post">
                 <div class="login__input__container">
                     <label for="username" class="login__label">Username</label>
                     <input type="text" id="username" name="username" class="login__input" required>
@@ -40,4 +28,30 @@ if ($_POST['username'] && $_POST['password']) {
             </form>
         </div>
     </div>
+    <script type="module">
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            let formData = new FormData();
+            formData.append('function', 'userHandler');
+            formData.append('username', username);
+            formData.append('password', password);
+
+            // AJAX request to submit form data without page reload
+            axios.post('/src/Controllers/LoginController.php', formData)
+                .then(function (response) {
+                    console.log(response.data); // Handle the response here
+                    if (response.data.error) {
+                        alert(response.data.error); // Show error if user is not found
+                    } else {
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
 </body>
