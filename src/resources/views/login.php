@@ -43,14 +43,10 @@
             // AJAX request to submit form data without page reload
             axios.post('/src/Controllers/LoginController.php', formData)
                 .then(function (response) {
-                    console.log(response.data); // Handle the response here
-                    if (response.data.error) {
-                        alert(response.data.error); // Show error if user is not found
-                    } else {
-                    }
+                    console.log(response.data)
                 })
                 .catch(function (error) {
-                    console.error('Error:', error);
+                    console.log(error.response.data.error);
                 });
         });
     </script>
