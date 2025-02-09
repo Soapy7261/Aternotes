@@ -11,6 +11,7 @@ include 'bootstrap.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/resources/styles/root.css">
     <link rel="stylesheet" href="src/resources/styles/home.css">
+    <script src="src/resources/javascript/logoAnimation.js"></script>
 </head>
 <body>
     <header>
@@ -51,27 +52,5 @@ include 'bootstrap.php';
             </div>
         </div>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            const body = document.body;
-
-            const darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'enabled') {
-                body.classList.add('dark-mode');
-                themeIcon.textContent = 'Dark Mode';
-                themeToggle.setAttribute('aria-pressed', 'true');
-            }
-
-            themeToggle.addEventListener('click', () => {
-                body.classList.toggle('dark-mode');
-                const isDarkMode = body.classList.contains('dark-mode');
-                themeIcon.textContent = isDarkMode ? 'Dark Mode' : 'Light Mode';
-                localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-                themeToggle.setAttribute('aria-pressed', isDarkMode.toString());
-            });
-        });
-    </script>
 </body>
 </html>
