@@ -4,8 +4,8 @@
     "aternos/model": "^3.2"
   },
     "autoload": {
-        "files": [
-        "vendor/vlucas/phpdotenv/src/Dotenv.php"
-        ]
+        "psr-4": {
+          "App\\Models\\": "src/Models/"
+        }
     }
 }
