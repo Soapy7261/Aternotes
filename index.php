@@ -21,7 +21,7 @@ include 'bootstrap.php';
                 </button>
             </div>
             <div class="navbar__right">
-                <a class="navbar__container" href="<?php echo htmlspecialchars(urlHandler('src/resources/views/public/home.php')); ?>">
+                <a class="navbar__container" href="<?php echo htmlspecialchars(urlHandler('src/resources/views/login.php')); ?>">
                     <button class="navbar__button">
                         <span class="navbar_button--paddingEven">Log in</span>
                     </button>
