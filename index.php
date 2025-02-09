@@ -11,6 +11,7 @@ include 'bootstrap.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/resources/styles/root.css">
     <link rel="stylesheet" href="src/resources/styles/home.css">
+    <link rel="stylesheet" href="src/resources/styles/login.css">
     <script src="src/resources/javascript/logoAnimation.js"></script>
 </head>
 <body>
@@ -22,7 +23,7 @@ include 'bootstrap.php';
                 </button>
             </div>
             <div class="navbar__right">
-                <a class="navbar__container" href="<?php echo htmlspecialchars(urlHandler('src/resources/views/login.php')); ?>">
+                <a class="navbar__container" href="/login">
                     <button class="navbar__button">
                         <span class="navbar_button--paddingEven">Log in</span>
                     </button>
@@ -30,27 +31,19 @@ include 'bootstrap.php';
             </div>
         </nav>
     </header>
-    <main>
-        <div class="body__header">
-            <div class="hero__animation">
-                <img src="src/resources/images/logo_green.png" class="body__header__image" alt="Logo">
-            </div>
-            <h2 class="hero__tagline">Tools for the people, by Aternos moderators.</h2>
-            <div class="body__header__cards">
-                <div class="body__header__card">
-                    <h3>Guides</h3>
-                    <p>A central location for helpful and factual community-driven guides, fact-checked by reliable members.</p>
-                </div>
-                <div class="body__header__card body__header__card--central">
-                    <h3>A4M Team</h3>
-                    <p>Get to know the team behind A4M and the Aternos discord's moderation and support.</p>
-                </div>
-                <div class="body__header__card">
-                    <h3>Resources</h3>
-                    <p>Discover Aternos and exaroton from another angle through our information and facts.</p>
-                </div>
-            </div>
-        </div>
-    </main>
+    <?php
+        $url = $_SERVER['REQUEST_URI'] ?? 'home';
+        switch ($url) {
+            case '/':
+                include 'src/resources/views/home.php';
+                break;
+            case '/login':
+                include 'src/resources/views/login.php';
+                break;
+            default:
+                include 'src/resources/views/404.php';
+                break;
+        }
+    ?>
 </body>
 </html>
