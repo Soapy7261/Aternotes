@@ -93,7 +93,6 @@
     align-items: center;
     min-height: 100vh;
     padding: 8rem 2rem 4rem;
-    background: linear-gradient(160deg, var(--hero-bg-1) 0%, var(--hero-bg-2) 100%);
     text-align: center;
 }
 
