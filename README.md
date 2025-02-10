@@ -12,12 +12,27 @@ Aternotes' current roadmap consists of:
 - Public aternos moderator list with a cooldown of 6 hours of fetching moderator profiles from discord
 
 ## Local development
-To locally develop the application, all you need to do is clone the repository and install the composer packages.
+To locally develop the application, you will need to have the following installed:
+- Node.js & NPM
+- Docker compose
+- PHP and composer
+
+Before running the application, you should copy the .env.example to .env:
+```bash
+cp .env.example .env
+```
+
+Then, you should install the composer dependencies:
 ```bash
 composer install
 ```
 
-Then, you can run the application using the following command:
+After that, you should install the npm dependencies:
 ```bash
-php -S localhost:8000
+npm install
+```
+
+After that, you should run the following command to start the development server:
+```bash
+docker compose up --build
 ```
