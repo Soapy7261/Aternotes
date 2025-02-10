@@ -180,8 +180,9 @@
 @media (max-width: 767px) {
     .navbar {
         padding: 1rem;
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        position: unset;
     }
 
     .body__header {
@@ -189,7 +190,7 @@
     }
 
     .body__header__image {
-        height: 8rem;
+        height: 4rem;
     }
 
     .hero__tagline {
