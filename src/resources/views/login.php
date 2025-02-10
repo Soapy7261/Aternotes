@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/root.css">
-    <link rel="stylesheet" href="../styles/login.css">
-    <script src="/node_modules/axios/dist/axios.js"></script>
-</head>
-
-<body>
+<main>
     <div class="container">
         <div class="login__container">
             <h1 class="login__header">Log in</h1>
-            <img class="login__image" src="../images/logo_green.png" alt="logo" style="height: 5rem">
+            <img class="login__image" src="/src/resources/images/logo_green.png" alt="logo" style="height: 5rem">
             <form id="loginForm" class="login__form" action="" method="post">
                 <div class="login__input__container">
                     <label for="username" class="login__label">Username</label>
@@ -50,4 +38,4 @@
                 });
         });
     </script>
-</body>
+</main>
