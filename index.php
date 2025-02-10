@@ -11,6 +11,7 @@ include 'bootstrap.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/resources/styles/root.css">
     <script src="src/resources/javascript/logoAnimation.js"></script>
+    <script src="/node_modules/axios/dist/axios.js"></script>
 </head>
 <body>
     <header>
