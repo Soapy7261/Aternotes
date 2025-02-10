@@ -10,8 +10,6 @@ include 'bootstrap.php';
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/resources/styles/root.css">
-    <link rel="stylesheet" href="src/resources/styles/home.css">
-    <link rel="stylesheet" href="src/resources/styles/login.css">
     <script src="src/resources/javascript/logoAnimation.js"></script>
 </head>
 <body>
