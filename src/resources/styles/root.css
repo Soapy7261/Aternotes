@@ -1,3 +1,6 @@
+@import 'home.css';
+@import 'login.css';
+
 :root {
     --primary-color: #f8f9fa;
     --secondary-color: #2d3436;
