@@ -33,13 +33,13 @@ include 'bootstrap.php';
         $url = $_SERVER['REQUEST_URI'] ?? 'home';
         switch ($url) {
             case '/':
-                include 'src/resources/views/home.php';
+                include 'views/home.php';
                 break;
             case '/login':
-                include 'src/resources/views/login.php';
+                include 'views/login.php';
                 break;
             default:
-                include 'src/resources/views/404.php';
+                include 'views/404.php';
                 break;
         }
     ?>
