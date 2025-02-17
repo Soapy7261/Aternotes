@@ -1,7 +1,7 @@
 <main>
     <div class="body__header">
         <div class="hero__animation">
-            <img src="src/resources/images/logo_green.png" class="body__header__image" alt="Logo">
+            <img src="../images/logo_green.png" class="body__header__image" alt="Logo">
         </div>
         <h2 class="hero__tagline">Tools for the people, by Aternos moderators.</h2>
         <div class="body__header__cards">
