@@ -1,7 +1,7 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require '../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable('../');
 $dotenv->load();
 
 $driver = (new \Aternos\Model\Driver\Mysqli\Mysqli())
@@ -11,4 +11,4 @@ $driver = (new \Aternos\Model\Driver\Mysqli\Mysqli())
 
 \Aternos\Model\Driver\DriverRegistry::getInstance()->registerDriver($driver);
 
-include 'src/Controllers/UrlController.php';
+include '../src/Controllers/UrlController.php';
