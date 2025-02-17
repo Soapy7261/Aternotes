@@ -33,6 +33,7 @@ services:
       MYSQL_PASSWORD: ${DATABASE_PASSWORD}  # User password
     volumes:
       - mariadb_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app-network
 
