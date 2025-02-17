@@ -13,7 +13,7 @@ Aternotes' current roadmap consists of:
 
 ## Local development
 To run and delvelp the project locally. 
-- Make sure you got docker  and docker compse installed
+- Make sure you got docker  and docker compose installed
 - Make a copy of .env.example and rename it to .env
 - set the DATABASE_NAME = aternotes or atleast the same as in the init.sql file
 - Run `docker compose up` 
