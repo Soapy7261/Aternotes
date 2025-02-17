@@ -1,3 +1,5 @@
+USE aternotes;
+
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL UNIQUE PRIMARY KEY,
     username VARCHAR(255) UNIQUE NOT NULL,
