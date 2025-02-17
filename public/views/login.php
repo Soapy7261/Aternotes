@@ -16,7 +16,7 @@
             </form>
         </div>
     </div>
-    <script type="module">
+    <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from reloading the page
 
