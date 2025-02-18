@@ -24,7 +24,7 @@ if (isset($_POST['function'])) {
 
 function userHandler(string $username, string $password)
 {
-
+    $data = json_decode(file_get_contents("php://input"), true);
     $user = User::select(['username' => $username]);
 
     $firstUser = $user[0] ?? null;

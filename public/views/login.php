@@ -27,7 +27,7 @@
                 username: username,
                 password: password,
             }
-            fetch('src/Conroller/LoginController.php', {
+            fetch('src/Controllers/LoginController.php', {
                 method: 'POST', 
                 headers:{
                     'Content-Type': 'application/json', 
