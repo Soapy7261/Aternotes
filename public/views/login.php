@@ -2,7 +2,7 @@
     <div class="container">
         <div class="login__container">
             <h1 class="login__header">Log in</h1>
-            <img class="login__image" src="/src/resources/images/logo_green.png" alt="logo">
+            <img class="login__image" src="../images/logo_green.png" alt="logo">
             <form id="loginForm" class="login__form" action="" method="post">
                 <div class="login__input__container">
                     <label for="username" class="login__label">Username</label>
