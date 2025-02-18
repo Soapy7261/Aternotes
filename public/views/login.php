@@ -22,20 +22,24 @@
 
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-
-            let formData = new FormData();
-            formData.append('function', 'userHandler');
-            formData.append('username', username);
-            formData.append('password', password);
-
-            // AJAX request to submit form data without page reload
-            axios.post('/src/Controllers/LoginController.php', formData)
-                .then(function (response) {
-                    console.log(response.data)
-                })
-                .catch(function (error) {
-                    console.log(error.response.data.error);
-                });
+            const formData = {
+                function: 'userHandler',
+                username: username,
+                password: password,
+            }
+            fetch('src/Conroller/UserController.php', {
+                method: 'POST', 
+                headers:{
+                    'Content-Type': 'application/json', 
+                },
+                body: JSON.stringify(formData) 
+                .then(data => console.log(data))
+                .catch(error => {console.error(error)})
+            })
+            
+        
         });
+
     </script>
+
 </main>
